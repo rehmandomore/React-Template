@@ -1,4 +1,4 @@
-# Nextjs Typescritp TailwindCSS 3
+# Nextjs Typescritpt TailwindCSS 3
 
 ```bash
 
