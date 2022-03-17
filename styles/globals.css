@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* layer base preset */
+/* follwing when compiled will be inserted at the end of base styles */
+@layer base {
+  /* @font-face {
+    font-family: Oswald;
+    src: url(@/assets/fonts/Oswald/Oswald-Bold.ttf) format("​truetype​");
+  } */
+
+  body {
+    @apply z-0 bg-gray-50;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+}
+.main {
+  background-image: url(../public/img/hero-bg.png);
+}
+
+@layer components {
+  .dropdown_hover {
+    @apply hover:border-l-8 border-primary text-primary duration-500  flex items-center w-full text-left px-3 py-2;
+  }
+  .hero-things {
+    @apply bg-white rounded-full flex items-center justify-evenly p-4 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .form-panel {
+    @apply md:mt-0 md:col-span-2 bg-white shadow sm:rounded-md px-4 py-5 sm:p-6;
+  }
+  .form-simple {
+    @apply mt-1 focus:ring-primary focus:border-primary block w-full shadow-sm sm:text-sm border-gray-300 rounded-md;
+  }
+}
