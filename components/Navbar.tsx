@@ -8,7 +8,7 @@ type Props = {
 const Navbar = ({ onMenuClick }: Props) => {
   return (
     <div className="p-5 fixed top-0 w-full">
-      <div className=" bg-white shadow-md rounded-xl w-full flex items-center">
+      <div className=" bg-white shadow-2xl rounded-xl w-full flex items-center">
         <div className="p-5">
           <img
             className="w-9"
@@ -27,7 +27,9 @@ const Navbar = ({ onMenuClick }: Props) => {
               <li>
                 <a href="#projects">Work</a>
               </li>
-              <li>Testimonials</li>
+              <li>
+                <a href="#testimonials">Testimonials</a>
+              </li>
               <li>FAQ</li>
               <li>Contact</li>
             </ul>

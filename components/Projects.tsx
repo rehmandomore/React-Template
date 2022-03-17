@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 type Props = {
   name?: string;
@@ -69,7 +70,8 @@ const Projects = ({ name }: Props) => {
     value2 === 3 ? setValue2(0) : setValue2(value2 + 1);
   };
   return (
-    <div className="container mx-auto">
+    // Main Div
+    <div className="pb-20">
       {/* Title */}
       <div className="flex items-center mt-36 space-x-5">
         <hr className="bg-[#40B2B5] h-1 w-32 rounded-lg" />
@@ -78,7 +80,16 @@ const Projects = ({ name }: Props) => {
         </h1>
       </div>
       {/* Slider 1 */}
-      <div className="rounded-xl mt-20 shadow-md">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className="rounded-xl mt-20 shadow-md"
+      >
         {/* Slide Image */}
         <div className="p-7">
           <img
@@ -141,9 +152,18 @@ const Projects = ({ name }: Props) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Slider 2 */}
-      <div className="rounded-xl mt-20 shadow-md">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.8 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className="rounded-xl mt-20 shadow-md"
+      >
         {/* Slide Image */}
         <div className="p-7">
           <img
@@ -205,6 +225,33 @@ const Projects = ({ name }: Props) => {
               </span>
             </div>
           </div>
+        </div>
+      </motion.div>
+      <div className="flex lg:flex-row flex-col items-center justify-evenly lg:p-7 p-0 mt-20 border-2 border-gray-200 rounded-3xl">
+        <div className="flex space-x-3 p-5">
+          <h1 className="text-[#40b2b5] font-semibold">5+</h1>
+          <span>
+            <p className="font-medium">Years Experience</p>
+            <small>over 40 projects</small>
+          </span>
+        </div>
+        <hr className="w-[2px] h-20 bg-gray-200 lg:block hidden" />
+        <hr className="h-[2px] w-full bg-gray-200 lg:hidden block" />
+        <div className="flex space-x-3 p-5">
+          <h1 className="text-[#40b2b5] font-semibold">12</h1>
+          <span>
+            <p className="font-medium">Features & Awards</p>
+            <small>from design community</small>
+          </span>
+        </div>
+        <hr className="w-[2px] h-20 bg-gray-200 lg:block hidden" />
+        <hr className="h-[2px] w-full bg-gray-200 lg:hidden block" />
+        <div className="flex space-x-3 p-5">
+          <h1 className="text-[#40b2b5] font-semibold">98%</h1>
+          <span>
+            <p className="font-medium">Clients Rating</p>
+            <small>30+ testimonials</small>
+          </span>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import GetInTouch from "../components/GetInTouch";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import Projects from "../components/Projects";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   let [showSideMenu, setSideMenu] = useState<boolean>(false);
@@ -20,8 +21,11 @@ const Home = () => {
         onClose={toggleSidebar}
       />
       <HeroSection />
-      <GetInTouch />
-      <Projects />
+      <div className="container mx-auto">
+        <GetInTouch />
+        <Projects />
+        <Testimonials />
+      </div>
     </div>
   );
 };
